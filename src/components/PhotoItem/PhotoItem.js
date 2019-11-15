@@ -7,20 +7,21 @@ import styles from './PhotoItemStyle';
 const photoItem = ({ item }) => (
     <View style={styles.container}>
         <View style={styles.header}>
-            <TitleText text="accusamus beatae ad facilis cum similique qui sunt" />
+            <TitleText text={item.title} />
         </View>
         <View style={styles.imageContainer}>
             <Image style={styles.image}
-                source={{uri: 'https://via.placeholder.com/600/92c952'}}
+                source={{uri: item.url}}
             />
         </View>
     </View>
-    // accusamus beatae ad facilis cum similique qui sunt
-    // https://via.placeholder.com/600/92c952
 );
 
 photoItem.propTypes = {
-    item: PropTypes.string.isRequired,
+    item: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired
+    }).isRequired,
 };
 
 export default photoItem;
