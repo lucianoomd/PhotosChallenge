@@ -3,9 +3,9 @@ import { COLORS } from '../../Constants';
 
 const styles = StyleSheet.create({
     container: {
-        width: 160,
+        width: 120,
         backgroundColor: COLORS.WHITE,
-        marginBottom: 15,
+        marginBottom: 4,
         borderRadius: 10,
         margin: 4
     },
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     image: {
-        height: 140,
+        height: 80,
         resizeMode: 'contain',
     }
 });
